@@ -3,3 +3,15 @@
 [user]
 email = "uasi@uasi.jp"
 name = "Tomoki Aonuma"
+
+[aliases]
+tug = ["bookmark", "advance"]
+
+[revsets]
+bookmark-advance-to = "closest_pushable(@)"
+
+[revset-aliases]
+"blank()" = "(empty() ~ merges() ~ root()) & description(exact:'')"
+"filled()" = "(~empty() | merges()) ~ description(exact:'')"
+
+"closest_pushable(to)" = "heads(::to & mutable() & filled())"
