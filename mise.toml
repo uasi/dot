@@ -33,6 +33,7 @@ zsh = true
 
 [tasks.bootstrap]
 hide = true
+depends = ["bootstrap-config-repo"]
 dir = "~/.config/mise"
 run = """
 : enabling local config from src.d
@@ -50,5 +51,17 @@ if [ -n "$conf_linked" ]; then
   echo "info: local config enabled; you may need to re-run bootstrap"
 else
   echo "info: nothing changed"
+fi
+"""
+
+[tasks.bootstrap-config-repo]
+hide = true
+dir = "~/.config/mise"
+run = """
+: initializing config repo
+
+if [ ! -d .jj ]; then
+  jj git init
+  jj bookmark track main@origin
 fi
 """
