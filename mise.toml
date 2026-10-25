@@ -3,3 +3,4 @@ root = "~/.config/mise/dotfiles.d"
 
 [dotfiles]
 "~/.config/git/config" = {}
+"~/.config/jj/config.toml" = {}
