@@ -7,6 +7,9 @@ rg = "latest"
 [settings.dotfiles]
 root = "~/.config/mise/dotfiles.d"
 
+[settings.npm]
+package_manager = "aube"
+
 [dotfiles]
 "~/.config/git/config" = {}
 "~/.config/helix/config.toml" = {}
