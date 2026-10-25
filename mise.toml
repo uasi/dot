@@ -1,4 +1,5 @@
 [tools]
+aube = "latest"
 helix = "latest"
 jj = "latest"
 rg = "latest"
