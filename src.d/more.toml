@@ -1,2 +1,6 @@
 [tools]
+aube = "latest"
 jjui = "latest"
+node = "latest"
+pnpm = "latest"
+uv = "latest"
