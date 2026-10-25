@@ -7,6 +7,7 @@ root = "~/.config/mise/dotfiles.d"
 
 [dotfiles]
 "~/.config/git/config" = {}
+"~/.config/helix/config.toml" = {}
 "~/.config/jj/config.toml" = {}
 
 [dotfiles."~/.bash_profile/load_profile"]

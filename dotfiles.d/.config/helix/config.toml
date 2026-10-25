@@ -1,0 +1,30 @@
+theme = "base16_terminal"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.inline-diagnostics]
+other-lines = "hint"
+
+[editor.whitespace.render]
+tab = "all"
+
+[keys.insert]
+"C-b" = "move_char_left"
+"C-f" = "move_char_right"
+"C-a" = "goto_line_start"
+"C-e" = "goto_line_end_newline"
+
+[keys.normal]
+"0" = "goto_line_start"
+"$" = "goto_line_end"
+"D" = "kill_to_line_end"
+
+"#" = "toggle_comments"
+
+"tab" = "rotate_view"
+"S-tab" = "rotate_view_reverse"
+
+[keys.select]
+"$" = "goto_line_end"
+"D" = "kill_to_line_end"
