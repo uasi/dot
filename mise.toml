@@ -1,6 +1,7 @@
 [tools]
 helix = "latest"
 jj = "latest"
+rg = "latest"
 
 [settings.dotfiles]
 root = "~/.config/mise/dotfiles.d"
