@@ -4,6 +4,9 @@ helix = "latest"
 jj = "latest"
 rg = "latest"
 
+[settings]
+self_update = { auto = true }
+
 [settings.dotfiles]
 root = "~/.config/mise/dotfiles.d"
 
