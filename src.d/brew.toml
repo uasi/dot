@@ -1,0 +1,9 @@
+[bootstrap.packages]
+"brew:curl" = "latest"
+"brew:git" = "latest"
+
+[dotfiles."~/.bash_profile/brew"]
+block = "export PATH=/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
+
+[dotfiles."~/.zshenv/brew"]
+block = "export PATH=/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
