@@ -4,3 +4,15 @@ root = "~/.config/mise/dotfiles.d"
 [dotfiles]
 "~/.config/git/config" = {}
 "~/.config/jj/config.toml" = {}
+
+[dotfiles."~/.bash_profile/load_profile"]
+line = "[[ -f ~/.profile && -z \"${SH_PROFILE_LOADED:-}\" ]] && . ~/.profile"
+position = "prepend"
+
+[dotfiles."~/.profile/loaded_marker"]
+line = "SH_PROFILE_LOADED=1"
+position = "prepend"
+
+[bootstrap.mise_shell_activate]
+bash = true
+zsh = true
