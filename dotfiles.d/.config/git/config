@@ -3,3 +3,5 @@
 [user]
 	email = uasi@uasi.jp
 	name = Tomoki Aonuma
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
