@@ -14,9 +14,16 @@
     (prefer uv "uv pip" pip))
   (if uncertain (ask))))
 
-(prefer ; installer
+(prefer ; installers
   mise-project-local
   mise-global
   system-package-manager
   always-ask: '("curl | sh" manual-download))
+
+(prefer ; operations
+  (if jj-vcs
+    (prefer ; commit
+      "jj commit -m <msg>"
+      avoid: "jj describe -m <msg>")))
+    
 ```
