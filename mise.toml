@@ -32,6 +32,7 @@ bash = true
 zsh = true
 
 [tasks.bootstrap]
+hide = true
 dir = "~/.config/mise"
 run = """
 : enabling local config from src.d
