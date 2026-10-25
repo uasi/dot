@@ -20,3 +20,24 @@ position = "prepend"
 [bootstrap.mise_shell_activate]
 bash = true
 zsh = true
+
+[tasks.bootstrap]
+dir = "~/.config/mise"
+run = """
+: enabling local config from src.d
+
+{% for env in mise_env | default(value=[]) %}
+src=src.d/{{ env }}.toml
+dst=conf.d/{{ env }}.local.toml
+if [ -f "$src" -a ! -f "$dst" ]; then
+  ln -s "../$src" "$dst"
+  conf_linked=1
+fi
+{% endfor %}
+
+if [ -n "$conf_linked" ]; then
+  echo "info: local config enabled; you may need to re-run bootstrap"
+else
+  echo "info: nothing changed"
+fi
+"""
